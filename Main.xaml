@@ -152,14 +152,15 @@
           <av:PointCollection x:Key="ConnectorLocation">310,85 310,115 270,115 270,150</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <State x:Name="__ReferenceID0" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="496.66666666666674,226.66666666666663" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+      <State x:Name="__ReferenceID0" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="496.66666666666674,344" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
         <State.Entry>
-          <Sequence sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;success&quot;]" />
           </Sequence>
         </State.Entry>
         <sap:WorkflowViewStateService.ViewState>
