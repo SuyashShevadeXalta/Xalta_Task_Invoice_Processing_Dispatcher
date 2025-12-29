@@ -2,32 +2,6 @@
   "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
   "entryPoints": [
     {
-      "filePath": "EmailTrigger.xaml",
-      "uniqueId": "521cab65-3814-4dcb-91cf-3eef864f80dd",
-      "type": "process",
-      "input": {
-        "type": "object",
-        "properties": {
-          "UiPathEventConnector": {
-            "type": "string"
-          },
-          "UiPathEvent": {
-            "type": "string"
-          },
-          "UiPathEventObjectType": {
-            "type": "string"
-          },
-          "UiPathEventObjectId": {
-            "type": "string"
-          },
-          "UiPathAdditionalEventData": {
-            "type": "string"
-          }
-        },
-        "required": []
-      }
-    },
-    {
       "filePath": "Main.xaml",
       "uniqueId": "c82b90ae-95c1-48b3-9eca-58d3820b8cb8",
       "type": "process",
