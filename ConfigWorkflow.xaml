@@ -111,7 +111,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assing out_Config (initialization)" sap:VirtualizedContainerService.HintSize="512,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assing out_Config action (initialization)" sap:VirtualizedContainerService.HintSize="512,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_Config]</OutArgument>
       </Assign.To>
@@ -125,7 +125,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="Sheet" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Read settings and constants from the configuration file and add them to the Config dictionary." DisplayName="Get local settings and constants" sap:VirtualizedContainerService.HintSize="520,1108" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence sap2010:Annotation.AnnotationText="Read settings and constants from the configuration file and add them to the Config dictionary." DisplayName="Get local settings and constants" sap:VirtualizedContainerService.HintSize="520,420" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_SettingsAndConstants" />
             </Sequence.Variables>
@@ -137,7 +137,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[Dt_SettingsAndConstants]" DisplayName="Read range (Settings and Constants sheets)" sap:VirtualizedContainerService.HintSize="486.4,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="[Sheet]" WorkbookPath="[in_ConfigFile]" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_SettingsAndConstants]" DisplayName="For each configuration row" sap:VirtualizedContainerService.HintSize="486.4,883.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_SettingsAndConstants]" DisplayName="For each configuration row" sap:VirtualizedContainerService.HintSize="486.4,195.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
