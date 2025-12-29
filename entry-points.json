@@ -30,7 +30,48 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "c82b90ae-95c1-48b3-9eca-58d3820b8cb8",
-      "type": "process"
+      "type": "process",
+      "output": {
+        "type": "object",
+        "properties": {
+          "Out_AttachmentList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/job-attachment"
+            }
+          }
+        },
+        "definitions": {
+          "job-attachment": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string",
+                "description": "Orchestrator attachment key"
+              },
+              "FullName": {
+                "type": "string",
+                "description": "File name"
+              },
+              "MimeType": {
+                "type": "string",
+                "description": "The MIME type of the content, such as \u0022application/json\u0022 or \u0022image/png"
+              },
+              "Metadata": {
+                "type": "object",
+                "description": "Dictionary\u003Cstring, string\u003E of metadata",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "ID"
+            ],
+            "x-uipath-resource-kind": "JobAttachment"
+          }
+        }
+      }
     }
   ]
 }
