@@ -140,7 +140,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <StateMachine InitialState="{x:Reference __ReferenceID1}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine InitialState="{x:Reference __ReferenceID1}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="962.6666666666666,262.32333333333327" sap2010:WorkflowViewState.IdRef="StateMachine_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -206,9 +206,7 @@
             <Transition.Action>
               <ui:LogMessage DisplayName="Log Message (initialization failure)" sap:VirtualizedContainerService.HintSize="346,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;System exception at initialization: &quot; + SystemException.Message + &quot; at Source: &quot; + SystemException.Source]" />
             </Transition.Action>
-            <Transition.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="SystemException IsNot Nothing" />
-            </Transition.Condition>
+            <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
           </Transition>
           <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="451.3333333333333,536.6666666666666" sap2010:WorkflowViewState.IdRef="Transition_4">
             <sap:WorkflowViewStateService.ViewState>
@@ -219,7 +217,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Transition.To>
-              <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="&#xD;&#xA;The Dispatcher saves the email attachments locally, uploads each file to the Orchestrator Storage Bucket, and creates one queue item per attachment containing the required metadata." DisplayName="Process Invoices" sap:VirtualizedContainerService.HintSize="496.66666666666674,710.6666666666666" sap2010:WorkflowViewState.IdRef="State_3">
+              <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="&#xA;The Dispatcher saves the email attachments locally, uploads each file to the Orchestrator Storage Bucket, and creates one queue item per attachment containing the required metadata." DisplayName="Process Invoices" sap:VirtualizedContainerService.HintSize="280,170.66666666666666" sap2010:WorkflowViewState.IdRef="State_3">
                 <State.Entry>
                   <Sequence sap:VirtualizedContainerService.HintSize="450,233.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
@@ -248,7 +246,7 @@
                   <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="451.3333333333333,536.6666666666666" sap2010:WorkflowViewState.IdRef="Transition_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:PointCollection x:Key="ConnectorLocation">110,578.8666666666667 79.99999999999997,578.8666666666667 79.99999999999997,271.5333333333333 150,271.5333333333333</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">110,578.8666666666667 80,578.8666666666667 80,271.5333333333333 150,271.5333333333333</av:PointCollection>
                         <x:Int32 x:Key="SrcConnectionPointIndex">41</x:Int32>
                         <x:Int32 x:Key="DestConnectionPointIndex">61</x:Int32>
                       </scg:Dictionary>
@@ -259,9 +257,7 @@
                     <Transition.Action>
                       <ui:LogMessage DisplayName="Log Message (initialization failure)" sap:VirtualizedContainerService.HintSize="346,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;System exception at initialization: &quot; + SystemException.Message + &quot; at Source: &quot; + SystemException.Source]" />
                     </Transition.Action>
-                    <Transition.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="SystemException isNot Nothing" />
-                    </Transition.Condition>
+                    <Transition.Condition>[SystemException isNot Nothing]</Transition.Condition>
                   </Transition>
                   <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="451.3333333333333,536.6666666666666" sap2010:WorkflowViewState.IdRef="Transition_3">
                     <sap:WorkflowViewStateService.ViewState>
@@ -277,9 +273,7 @@
                     <Transition.Action>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="346,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot; &quot;]" />
                     </Transition.Action>
-                    <Transition.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="SystemException Is Nothing" />
-                    </Transition.Condition>
+                    <Transition.Condition>[SystemException Is Nothing]</Transition.Condition>
                   </Transition>
                 </State.Transitions>
               </State>
@@ -287,9 +281,7 @@
             <Transition.Action>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="346,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Initialization to :  Successful. &quot;]" />
             </Transition.Action>
-            <Transition.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="SystemException Is Nothing" />
-            </Transition.Condition>
+            <Transition.Condition>[SystemException Is Nothing]</Transition.Condition>
           </Transition>
         </State.Transitions>
       </State>
