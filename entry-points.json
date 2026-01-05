@@ -25,6 +25,12 @@
           },
           "in_InvoiceFilePath": {
             "type": "string"
+          },
+          "in_DictFileInformation": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
           }
         },
         "required": []
