@@ -2,35 +2,50 @@
   "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
   "entryPoints": [
     {
-      "filePath": "EmailTrigger.xaml",
-      "uniqueId": "521cab65-3814-4dcb-91cf-3eef864f80dd",
+      "filePath": "Main.xaml",
+      "uniqueId": "c82b90ae-95c1-48b3-9eca-58d3820b8cb8",
       "type": "process",
       "input": {
         "type": "object",
         "properties": {
-          "UiPathEventConnector": {
+          "io_Config": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "in_Config": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "in_InvoiceFileName": {
             "type": "string"
           },
-          "UiPathEvent": {
+          "in_InvoiceFilePath": {
             "type": "string"
           },
-          "UiPathEventObjectType": {
-            "type": "string"
-          },
-          "UiPathEventObjectId": {
-            "type": "string"
-          },
-          "UiPathAdditionalEventData": {
-            "type": "string"
+          "in_DictFileInformation": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
           }
         },
         "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "io_Config": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        }
       }
-    },
-    {
-      "filePath": "Main.xaml",
-      "uniqueId": "c82b90ae-95c1-48b3-9eca-58d3820b8cb8",
-      "type": "process"
     }
   ]
 }

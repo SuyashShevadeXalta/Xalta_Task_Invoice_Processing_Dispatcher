@@ -1,13 +1,13 @@
 {
-  "DisplayName": "EmailTrigger",
+  "DisplayName": "Main",
   "Tooltip": null,
   "HelpLink": null,
   "Color": null,
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "UiPathEventConnector",
-      "DisplayName": "UiPathEventConnector",
+      "Name": "io_Config",
+      "DisplayName": "io_Config",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
@@ -18,8 +18,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "UiPathEvent",
-      "DisplayName": "UiPathEvent",
+      "Name": "in_Config",
+      "DisplayName": "in_Config",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
@@ -30,8 +30,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "UiPathEventObjectType",
-      "DisplayName": "UiPathEventObjectType",
+      "Name": "in_InvoiceFileName",
+      "DisplayName": "in_InvoiceFileName",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
@@ -42,8 +42,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "UiPathEventObjectId",
-      "DisplayName": "UiPathEventObjectId",
+      "Name": "in_InvoiceFilePath",
+      "DisplayName": "in_InvoiceFilePath",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
@@ -54,8 +54,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "UiPathAdditionalEventData",
-      "DisplayName": "UiPathAdditionalEventData",
+      "Name": "in_DictFileInformation",
+      "DisplayName": "in_DictFileInformation",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
