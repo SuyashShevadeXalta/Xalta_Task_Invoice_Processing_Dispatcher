@@ -4,7 +4,42 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "c82b90ae-95c1-48b3-9eca-58d3820b8cb8",
-      "type": "process"
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "io_Config": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "in_Config": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "in_InvoiceFileName": {
+            "type": "string"
+          },
+          "in_InvoiceFilePath": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "io_Config": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        }
+      }
     }
   ]
 }
