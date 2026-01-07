@@ -1,15 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="in_DictFileInformation" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="in_InvoiceFilePath" Type="InArgument(x:String)" />
-    <x:Property Name="in_InvoiceFileName" Type="InArgument(x:String)" />
-    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="io_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
-  </x:Members>
-  <VisualBasic.Settings>
-    <x:Null />
-  </VisualBasic.Settings>
-  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -141,7 +130,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="956.6666666666666,670.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="843.6,671.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:BusinessRuleException" Name="BusinessException" />
       <Variable x:TypeArguments="s:Exception" Name="SystemException" />
@@ -152,18 +141,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <StateMachine InitialState="{x:Reference __ReferenceID1}" DisplayName="Dispatcher Process " sap:VirtualizedContainerService.HintSize="962.6666666666666,263.65666666666664" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine InitialState="{x:Reference __ReferenceID1}" DisplayName="Dispatcher Process Of Invoice Processing Task" sap:VirtualizedContainerService.HintSize="849.6,492" sap2010:WorkflowViewState.IdRef="StateMachine_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <av:Point x:Key="ShapeLocation">15,145</av:Point>
-          <x:Double x:Key="StateContainerWidth">725.6666666666667</x:Double>
+          <x:Double x:Key="StateContainerWidth">725.4</x:Double>
           <x:Double x:Key="StateContainerHeight">816</x:Double>
           <av:PointCollection x:Key="ConnectorLocation">65,170 95,170 95,169.13333333333333 150,169.13333333333333</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="These State will Perform Final cleanup by closing applications, clearing temporary files, and completing logging activities. Once these tasks are done, the process terminates." DisplayName="Final State" sap:VirtualizedContainerService.HintSize="270,154.66666666666666" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+      <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="These State will Perform Final cleanup by closing applications, clearing temporary files, and completing logging activities. Once these tasks are done, the process terminates." DisplayName="Final State" sap:VirtualizedContainerService.HintSize="270.4,153.6" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
         <State.Entry>
           <Sequence sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
@@ -177,7 +166,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">455,285</av:Point>
-            <av:Size x:Key="ShapeSize">270,154.66666666666666</av:Size>
+            <av:Size x:Key="ShapeSize">270.4,153.6</av:Size>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             <x:Double x:Key="StateContainerWidth">258.00000000000006</x:Double>
@@ -185,20 +174,27 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </State>
-      <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Initializes Process by reading the Config file, then the Orchestrator connection, creates required temporary and log folders, validates the received email object, and sets up logging to prepare the process for execution." DisplayName="Initialization State" sap:VirtualizedContainerService.HintSize="280,170.66666666666666" sap2010:WorkflowViewState.IdRef="State_2">
+      <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Initializes Process by reading the Config file, then the Orchestrator connection, creates required temporary and log folders, validates the received email object, and sets up logging to prepare the process for execution." DisplayName="Initialization State" sap:VirtualizedContainerService.HintSize="280,170.4" sap2010:WorkflowViewState.IdRef="State_2">
         <State.Entry>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadConfig - Invoke Workflow File (WorkFlows\ReadConfig.xaml)" sap:VirtualizedContainerService.HintSize="338.4,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Framework\Utilities\ReadConfig.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile" />
-              <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets" />
-              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[io_Config]</OutArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
+          <Sequence DisplayName="This flow indicates calling the Config workflow inside initialization " sap:VirtualizedContainerService.HintSize="451.2,227.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadConfig - Invoke Workflow File (Framework\Utilities\ReadConfig.xaml)" sap:VirtualizedContainerService.HintSize="417.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Framework\Utilities\ReadConfig.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile" />
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets" />
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
         </State.Entry>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">150,135</av:Point>
-            <av:Size x:Key="ShapeSize">280,170.66666666666666</av:Size>
+            <av:Size x:Key="ShapeSize">280,170.4</av:Size>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             <x:Double x:Key="StateContainerWidth">268.259628262328</x:Double>
@@ -225,23 +221,24 @@
           <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="448.8,522.4" sap2010:WorkflowViewState.IdRef="Transition_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:PointCollection x:Key="ConnectorLocation">332,305.66666666666663 332,335.66666666666663 264,335.66666666666663 264,485</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">332,305.4 332,335.4 264,335.4 264,485</av:PointCollection>
                 <x:Int32 x:Key="SrcConnectionPointIndex">51</x:Int32>
                 <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Transition.To>
-              <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="&#xA;The Dispatcher saves the email attachments locally, uploads each file to the Orchestrator Storage Bucket, and creates one queue item per attachment containing the required metadata." DisplayName="Process Invoices" sap:VirtualizedContainerService.HintSize="280,170.66666666666666" sap2010:WorkflowViewState.IdRef="State_3">
+              <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="&#xA;The Dispatcher saves the email attachments locally, uploads each file to the Orchestrator Storage Bucket, and creates one queue item per attachment containing the required metadata." DisplayName="Process Invoices" sap:VirtualizedContainerService.HintSize="580,1471.2" sap2010:WorkflowViewState.IdRef="State_3">
                 <State.Entry>
-                  <Sequence DisplayName="Process the download invoice from email &amp; upload invoice on storage bucket" sap:VirtualizedContainerService.HintSize="512.8,948" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Process the download invoice from email &amp; upload invoice on storage bucket" sap:VirtualizedContainerService.HintSize="535.2,1004.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="479.2,888" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="501.6,944.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                       <TryCatch.Try>
-                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="449.6,460" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="449.6,516.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="FileName" />
                             <Variable x:TypeArguments="x:String" Name="FilePath" />
@@ -251,37 +248,57 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadInvoiceFromEmail - Invoke Workflow File (WorkFlows\DownloadInvoiceFromEmail.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Framework\Utilities\DownloadInvoiceFromEmail.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <OutArgument x:TypeArguments="x:String" x:Key="out_InvoiceFilePath">[in_InvoiceFilePath]</OutArgument>
-                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[io_Config]</InArgument>
-                              <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception" />
-                              <OutArgument x:TypeArguments="x:String" x:Key="out_InvoiceFileName">[in_InvoiceFileName]</OutArgument>
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UploadInvoiceOnStorageBucket - Invoke Workflow File (WorkFlows\UploadInvoiceOnStorageBucket.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\Utilities\UploadInvoiceOnStorageBucket.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceFilePath">[in_InvoiceFilePath]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceFileName">[in_InvoiceFileName]</InArgument>
-                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[io_Config]</InArgument>
-                              <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception" />
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                             <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,284" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AddFileDetailsToQueue - Invoke Workflow File (Framework\Utilities\AddFileDetailsToQueue.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Framework\Utilities\AddFileDetailsToQueue.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadInvoiceFromEmail - Invoke Workflow File (WorkFlows\DownloadInvoiceFromEmail.xaml)" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Framework\Utilities\DownloadInvoiceFromEmail.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_DictFileInformation">[new System.Collections.Generic.Dictionary(Of System.String, System.Object) From { { FileName, in_DictFileInformation("FileName") },{ FilePath, in_DictFileInformation("FilePath") } }]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_FilePath" />
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_FileName" />
-                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config" />
-                                    <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception" />
+                                    <OutArgument x:TypeArguments="x:String" x:Key="out_InvoiceFilePath">[InvoiceFilePath]</OutArgument>
+                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                                    <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception">[SystemException]</OutArgument>
+                                    <OutArgument x:TypeArguments="x:String" x:Key="out_InvoiceFileName">[InvoiceFileName]</OutArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DownloadInvoiceFromEmail - Invoke Workflow File (WorkFlows\DownloadInvoiceFromEmail.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Framework\Utilities\DownloadInvoiceFromEmail.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                              <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception">[SystemException]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UploadInvoiceOnStorageBucket - Invoke Workflow File (WorkFlows\UploadInvoiceOnStorageBucket.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Framework\Utilities\UploadInvoiceOnStorageBucket.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                              <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception">[SystemException]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UploadInvoiceOnStorageBucket - Invoke Workflow File (WorkFlows\UploadInvoiceOnStorageBucket.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\Utilities\UploadInvoiceOnStorageBucket.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceFilePath">[InvoiceFilePath]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceFileName">[InvoiceFileName]</InArgument>
+                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                                    <OutArgument x:TypeArguments="s:Exception" x:Key="out_Exception">[SystemException]</OutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                               </Sequence>
@@ -327,7 +344,7 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">110,485</av:Point>
-                    <av:Size x:Key="ShapeSize">280,170.66666666666666</av:Size>
+                    <av:Size x:Key="ShapeSize">280,170.4</av:Size>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     <x:Double x:Key="StateContainerWidth">268</x:Double>
@@ -338,7 +355,7 @@
                   <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="451.3333333333333,536.6666666666666" sap2010:WorkflowViewState.IdRef="Transition_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:PointCollection x:Key="ConnectorLocation">110,578.8666666666667 80,578.8666666666667 80,271.5333333333333 150,271.5333333333333</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">110,578.72 80,578.72 80,271.32000000000005 150,271.32000000000005</av:PointCollection>
                         <x:Int32 x:Key="SrcConnectionPointIndex">41</x:Int32>
                         <x:Int32 x:Key="DestConnectionPointIndex">61</x:Int32>
                       </scg:Dictionary>
@@ -354,7 +371,7 @@
                   <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="451.3333333333333,536.6666666666666" sap2010:WorkflowViewState.IdRef="Transition_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:PointCollection x:Key="ConnectorLocation">390,570.3333333333334 590,570.3333333333334 590,439.66666666666663</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">390,570.2 590.2,570.2 590.2,438.6</av:PointCollection>
                         <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
                         <x:Int32 x:Key="DestConnectionPointIndex">39</x:Int32>
                       </scg:Dictionary>
@@ -376,6 +393,9 @@
             <Transition.Condition>[SystemException Is Nothing]</Transition.Condition>
           </Transition>
         </State.Transitions>
+        <State.Variables>
+          <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Configuration" />
+        </State.Variables>
       </State>
       <x:Reference>__ReferenceID2</x:Reference>
     </StateMachine>

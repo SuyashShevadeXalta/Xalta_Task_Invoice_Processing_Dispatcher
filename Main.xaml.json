@@ -28,42 +28,6 @@
       "IsPrincipal": true,
       "ArgumentType": 0,
       "DataSourceItems": null
-    },
-    {
-      "Name": "in_InvoiceFileName",
-      "DisplayName": "in_InvoiceFileName",
-      "Category": null,
-      "Tooltip": null,
-      "Placeholder": null,
-      "Widget": null,
-      "IsRequired": false,
-      "IsPrincipal": true,
-      "ArgumentType": 0,
-      "DataSourceItems": null
-    },
-    {
-      "Name": "in_InvoiceFilePath",
-      "DisplayName": "in_InvoiceFilePath",
-      "Category": null,
-      "Tooltip": null,
-      "Placeholder": null,
-      "Widget": null,
-      "IsRequired": false,
-      "IsPrincipal": true,
-      "ArgumentType": 0,
-      "DataSourceItems": null
-    },
-    {
-      "Name": "in_DictFileInformation",
-      "DisplayName": "in_DictFileInformation",
-      "Category": null,
-      "Tooltip": null,
-      "Placeholder": null,
-      "Widget": null,
-      "IsRequired": false,
-      "IsPrincipal": true,
-      "ArgumentType": 0,
-      "DataSourceItems": null
     }
   ]
 }
